@@ -1,27 +1,24 @@
-/*  This css creates the base layout of our page */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
 
 /* 
 
-  change margins and paddings from px 
+  is it okay to have width,margins and paddings with px
 
-  also checkout the width properties, no px
+  q1: ask is px okay to use for responsiveness**
 
-  ask is px okay to use for responsiveness
-
-  change text to rem
-
-  margin and paddings use rem, or em. google which one
+  should text values be in rem, or px is okay
 
 
 
-  q1 - should I use line break in html and
-   not give any width to the parqagraph, set its width to fit-content?
+
+  q2 - should I use line break in html and
+   not give any width to the text element, 
+   and set its width to fit-content?
     
-   or width: 15 px - The length of 1 line of the p.
+   or should i use "width: 15 px " - The length of 1 line of the p.
 
 
-   Q2- MOBILE FIRST OR MY WAY ?
+
 
 
 */
@@ -31,7 +28,6 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
-/* USE REM FOR FONT VALUES */
 
 li {
   list-style-type: none;
@@ -48,7 +44,6 @@ a {
   background-image: url("images/Hero/Nav/background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  /*  EXPERIMENT WITH WIDTH AND HEIGHT */
 }
 
 body {
@@ -61,17 +56,20 @@ nav {
   justify-content: space-between;
   margin: 0 10%;
   margin-bottom: 96px;
-  /* FIRST QUESTION. 
-  THE WHOLE PAGE HAS A 165 PX MARGIN ON THE LEFT AND THE RIGHT, 
-  WHERE SHOULD I PUT IT ? 
-  and how to do it without the background image size being limited to the margins */
+
+  /* Q3 . 
+  THE WHOLE PAGE HAS A 165 PX MARGIN ON THE LEFT AND THE RIGHT in figma design, 
+  WHERE SHOULD I PUT the margin ? 
+  I tried putting it in body, but then the background image of .hero gets clipped to the margins.
+  I went around the issue and put the margins on each section individually,
+  is there a better way to do it? */
 }
 
 .nav-div {
   display: flex;
 }
 
-/* Q2 - IMAGE QUALITY- SHOULD I USE SVG S FOR EVERYTHING ? */
+/* Q4 - IMAGE QUALITY- SHOULD I USE SVGs FOR EVERYTHING ? The png files look blurred*/
 
 nav ul {
   display: flex;
@@ -104,7 +102,6 @@ nav ul {
 
 .hero-main-content > h1 {
   margin-top: 100px;
-  /* SHOULD I USE PREFORMATTED TEXT INSTEAD OF H1 HERE */
 }
 
 .h1 {
@@ -123,13 +120,6 @@ nav ul {
   text-align: center;
   border: none;
   width: fit-content;
-
-  /* q3 - THE BUTTON FROWS THE FULL WIDTH WITHOUT ALIGN SELF, WHY */
-  /*  READ THIS 
-  https://medium.com/@kristinethejohnson/css-grid-the-confusion-of-align-justify-items-align-justify-content-and-align-justify-e94ac687fdb#:~:text=Like%20the%20justify%2Ditems%20property,(the%20block%20column%20axis).
-  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
-  */
 }
 
 #phone-pic-1 img {
@@ -159,7 +149,6 @@ nav ul {
 /* Features */
 .features {
   margin: 0 10%;
-  /* using variables for this margin for smaller screen sizes LEARN HOW TO */
   margin-top: 50px;
   margin-bottom: 100px;
   text-align: center;
@@ -229,9 +218,9 @@ nav ul {
     ". c c c b b b "
     ". c c c d d . "
     ". . . . d d . ";
-  /* Q8 THE GAPS AT THE START SHOW, BUT THE ONES AT THE END DO NOT */
-  /* IS IT A CORRECT WAY TO DO IT ?
-    I INCREASED THE NUMBER OF ROWS TO increase THE ROW SPACE */
+  /* q5 - Is this correct ? 
+    i increased the number of rows to adjust the spacing between the items,
+    how else can i do it effectively.*/
 }
 
 .testiominals-text {
@@ -333,10 +322,6 @@ nav ul {
 #achv-second-div {
   display: grid;
   row-gap: 30px;
-  /*Q8 WHEN I DECREASE ROW GAP THE TEXT GETS TO THE NEXT LINE, HOW TO FIX IT 
-  why doesnt the grid put the gap after the element is printed ?*/
-
-  /* WHEN I REMOVE THE ROW GAP IN INSPECT AND RETURN IT BACK IT CHANGES */
   column-gap: 40px;
   grid-template-columns: 1fr 1fr;
 }
@@ -347,21 +332,10 @@ nav ul {
   gap: 16px;
 }
 
-/* #achv-first-div {
-  width: max-content;
-} */
-
 #achv-first-div h3 {
-  /* HOW TO MAKE THIS TEXT FIT ITS CONTENT ? CSS */
   font-size: 48px;
   font-weight: 800;
   max-width: 12ch;
-
-  /* display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: var(--max-lines); */
-  /* https://www.makeuseof.com/css-limit-text-lines/#:~:text=Start%20by%20setting%20a%20CSS,clamp%20the%20line%20to%203. */
-  /* CANT USE THIS BECAUSE IT DOES NOT FIT THE TEXT PROPERLY , H3 IS NOT WRAPPED BY ITS CONTENT*/
   line-height: 64px;
 }
 
@@ -399,11 +373,8 @@ nav ul {
 }
 
 .headline-1-vertical {
-  /* Q7  gap: 32px; HOW TO APPLY GAP WITHOUT FLEX ? 
-  MARGIN BOTTOM OR PADDING*/
   max-width: 45ch;
   margin: 0 48px;
-  /* USING CH FOR WIDTH */
 }
 
 .headline-1-vertical * {
@@ -500,9 +471,9 @@ nav ul {
 }
 
 .cta-phones {
-  /* Q9 EVEN IF I DONT SPECIFY ANYTHING, THESE IMAGES GO TO THEIR INTENDED PLACES. HOWW?? */
+  /* Q6 EVEN IF I DONT SPECIFY ANYTHING, THESE IMAGES GO TO THEIR INTENDED PLACES. HOWW?? */
   /* in inspect, when i click on image, i can see that the top part of the image is cropped.
-  but when i resize the image, they are visible fully. how */
+  but when i resize the image, they are visible fully. */
   display: flex;
   overflow: hidden;
 }
