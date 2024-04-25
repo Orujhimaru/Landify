@@ -422,6 +422,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   row-gap: 30px;
   margin: 50px 10% 100px 10%;
 }
