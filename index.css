@@ -457,10 +457,6 @@ nav ul {
 
 /* CTA START */
 
-.cta {
-  background-color: #2ec5ce;
-}
-
 .cta-text {
   display: flex;
   flex-direction: column;
@@ -473,12 +469,11 @@ nav ul {
 }
 
 .cta-container {
+  background-color: #2ec5ce;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
   z-index: -2;
 }
 
